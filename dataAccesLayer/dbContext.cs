@@ -19,8 +19,7 @@ namespace dataAccesLayer
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //optionsBuilder.UseSqlServer("workstation id=KodigoDB.mssql.somee.com;packet size=4096;user id=RJAV4;pwd=12345678;data source=KodigoDB.mssql.somee.com;persist security info=False;initial catalog=KodigoDB");
-            optionsBuilder.UseSqlServer("Data Source=RJPC;Initial Catalog=kodigodatabase5;Integrated Security=True");
+            optionsBuilder.UseSqlServer("workstation id=ApiDatabasePruebaTecnica.mssql.somee.com;packet size=4096;user id=RJAV4;pwd=12345678;data source=ApiDatabasePruebaTecnica.mssql.somee.com;persist security info=False;initial catalog=ApiDatabasePruebaTecnica");
         }
     }
 }
