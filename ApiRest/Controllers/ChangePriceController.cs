@@ -14,12 +14,14 @@ using dataAccesLayer;
 using Microsoft.Extensions.Logging;
 using NLog;
 using NLog.Fluent;
+using Microsoft.AspNetCore.Cors;
 
 namespace ApiRest.Controllers
 {
     [Route("api/ChangePrice/")]
+    [EnableCors("MyPolicy")]
     [ApiController]
-    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class ChangePriceController : Controller
     {
         private productsBL ProductsBL = new productsBL();

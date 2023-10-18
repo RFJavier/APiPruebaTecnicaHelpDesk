@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using ApiRest.Modelo;
 using Microsoft.AspNetCore.Cors;
 using entityesLayer.interfaces;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 namespace ApiRest.Controllers
 {
@@ -16,6 +17,7 @@ namespace ApiRest.Controllers
     [Route("api/")]
     [EnableCors("MyPolicy")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class LoginController : Controller
     {
         private usuarioBL UsuarioBL = new usuarioBL();

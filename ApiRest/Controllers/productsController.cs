@@ -11,11 +11,12 @@ using System.Threading.Tasks;
 using System;
 using bussineslayer;
 using Microsoft.Extensions.Logging;
-
+using Microsoft.AspNetCore.Cors;
 
 namespace ApiRest.Controllers
 {
     [Route("api/products/")]
+    [EnableCors("MyPolicy")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class productsController : Controller

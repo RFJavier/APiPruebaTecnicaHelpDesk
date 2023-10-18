@@ -10,10 +10,12 @@ using entityesLayer;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using bussineslayer;
 using entityesLayer.interfaces;
+using Microsoft.AspNetCore.Cors;
 
 namespace ApiRest.Controllers
 {
     [Route("api/registeredusers/")]
+    [EnableCors("MyPolicy")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class UsuarioController : ControllerBase

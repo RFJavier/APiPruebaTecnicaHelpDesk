@@ -2,6 +2,7 @@
 using bussinesLayer;
 using entityesLayer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
@@ -10,6 +11,7 @@ using System.Threading.Tasks;
 namespace ApiRest.Controllers
 {
     [Route("api/productviewanonimous/")]
+    [EnableCors("MyPolicy")]
     [ApiController]
     [AllowAnonymous]
     public class ProductViewAnonimousController : Controller

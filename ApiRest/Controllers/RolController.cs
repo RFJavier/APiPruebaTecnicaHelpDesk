@@ -5,6 +5,7 @@ using entityesLayer;
 using entityesLayer.interfaces;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -17,6 +18,7 @@ using System.Threading.Tasks;
 namespace ApiRest.Controllers
 {
     [Route("api/rol/")]
+    [EnableCors("MyPolicy")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class RolController : ControllerBase

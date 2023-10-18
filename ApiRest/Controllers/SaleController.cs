@@ -12,10 +12,12 @@ using bussineslayer;
 using entityesLayer.interfaces;
 using bussinesLayer;
 using dataAccesLayer;
+using Microsoft.AspNetCore.Cors;
 
 namespace ApiRest.Controllers
 {
     [Route("api/sales/")]
+    [EnableCors("MyPolicy")]
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class SaleController : Controller
